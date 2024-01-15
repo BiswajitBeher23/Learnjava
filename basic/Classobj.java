@@ -4,6 +4,7 @@ public class Classobj {
     
     int age;
     String name;
+    String gender;
     String address;
     double salary;
 
