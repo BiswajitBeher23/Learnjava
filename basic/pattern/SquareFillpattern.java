@@ -1,6 +1,6 @@
 package basic.pattern;
 
-public class pattern {
+public class SquareFillpattern {
     // Function to demonstrate pattern
     public static void printPattern(int n)
     {
