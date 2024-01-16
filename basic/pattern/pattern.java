@@ -1,26 +1,27 @@
 package basic.pattern;
 
 public class pattern {
-
-    /**
-     * Innerpattern
-     */
-
-    public static void Innerpattern(int n) {
-
-        for (int i = 0; i <= n; i++) {
-            for (int j = 1; j <= i; j++) {
-                System.out.print(" ");
+    // Function to demonstrate pattern
+    public static void printPattern(int n)
+    {
+        int i, j;
+        // outer loop to handle rows
+        for (i = 0; i <= n; i++) {
+ 
+            // inner loop to handle columns
+            for (j = 0; j <= n; j++) {
+                System.out.print("*");
             }
+ 
+            // printing new line for each row
+            System.out.println();
         }
-        System.out.println();
-
     }
-
-    public static void main(String[] args) {
-
+ 
+    // Driver Function
+    public static void main(String args[])
+    {
         int n = 6;
-        Innerpattern(n);
-
+        printPattern(n);
     }
 }
