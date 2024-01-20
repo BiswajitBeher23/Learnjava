@@ -86,9 +86,9 @@ _It is a strongly typed language and not a weakly typed language. It is a dynami
 
 ## Abstract Class & Interface in Java
 
->👉 Lesson 1 - Inheritance in Java — Inheritance in Java OOPs with Example
+`👉 Lesson 1 - Inheritance in Java — Inheritance in Java OOPs with Example`
 
-👉 Lesson 2 - Polymorphism in Java — Polymorphism in Java OOPs with Example
+>👉 Lesson 2 - Polymorphism in Java — Polymorphism in Java OOPs with Example
 
 👉 Lesson 3 - Abstraction in Java — What is, Abstract Class & Method
 

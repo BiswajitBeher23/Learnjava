@@ -22,7 +22,7 @@ public class Employee {
             Y.showNextId();
             X = Y = null;
             System.gc();
-            System.runFinalization();
+           // System.runFinalization();
         }
         E.showNextId();
     }

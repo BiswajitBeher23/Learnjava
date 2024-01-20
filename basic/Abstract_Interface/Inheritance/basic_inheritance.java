@@ -1,4 +1,4 @@
-package basic.Abstract_Interface;
+package basic.Abstract_Interface.Inheritance;
 
 /**
  * Single inheritance
@@ -16,6 +16,9 @@ package basic.Abstract_Interface;
  * 
  * Super keyword can be used at variable, method and constructor level.
  */
+
+ /**Single inheritance & Multilevel inheritance */
+
 class Animal {
     void pet() {
         System.out.println("domestic pet animal");
