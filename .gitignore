@@ -22,9 +22,7 @@
 *.rar
 *.idea/
 Learnpath/
-studyplan/Beginnerlevel.md
-studyplan/Intermediatelevel.md
-studyplan/Prolevel.md
+studyplan/
 Learnjava.iml
 out/
 
