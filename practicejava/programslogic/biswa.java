@@ -1,4 +1,4 @@
-package basic.programsLogic;
+package practicejava.programslogic;
 
 import java.util.Scanner;
 class tipu{

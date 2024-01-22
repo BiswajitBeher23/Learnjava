@@ -1,4 +1,4 @@
-package basic.pattern;
+package practicejava.pattern;
 
 /**
  * diamondpattern

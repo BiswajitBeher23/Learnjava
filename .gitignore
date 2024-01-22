@@ -21,7 +21,7 @@
 *.tar.gz
 *.rar
 *.idea/
-Learnpath/
+learnpath/
 studyplan/
 Learnjava.iml
 out/

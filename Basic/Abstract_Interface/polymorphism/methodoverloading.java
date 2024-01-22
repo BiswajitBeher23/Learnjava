@@ -1,4 +1,4 @@
-package basic.Abstract_Interface.polymorphism;
+package Abstract_Interface.polymorphism;
 
 /**
  * By changing number of arguments
