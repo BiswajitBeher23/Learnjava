@@ -1,4 +1,4 @@
-package basic.memorymanagement;
+package Basic.memorymanagement;
 
 public class garbagecollection {
 

@@ -1,4 +1,4 @@
-package basic.String;
+package Basic.String;
 
 import java.util.Objects;
 //import org.apache.commons.lang3.StringUtils;

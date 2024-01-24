@@ -1,4 +1,4 @@
-package Abstract_Interface.Inheritance;
+package Basic.Abstract_Interface.Inheritance;
 
 class Employee {
     float salary = 40000;

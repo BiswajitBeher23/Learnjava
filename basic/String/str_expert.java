@@ -1,4 +1,4 @@
-package basic.String;
+package Basic.String;
 
 import java.util.*;
 
