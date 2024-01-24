@@ -1,4 +1,4 @@
-package Basic.Abstract_Interface.Inheritance;
+package Abstract_Interface.Inheritance;
 
 class A{
     void msg(){
