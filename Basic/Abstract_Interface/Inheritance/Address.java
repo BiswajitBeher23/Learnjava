@@ -1,4 +1,4 @@
-package Basic.Abstract_Interface.Inheritance;
+package Abstract_Interface.Inheritance;
 
 public class Address {
     String city, state, country;

@@ -1,4 +1,4 @@
-package Basic.Abstract_Interface.polymorphism;
+package Abstract_Interface.polymorphism;
 
 public class methodoverriding {
     public static void main(String[] args) {
