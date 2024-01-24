@@ -1,4 +1,4 @@
-package Basic.array;
+package array;
 
 public class arraypassbyref {
  

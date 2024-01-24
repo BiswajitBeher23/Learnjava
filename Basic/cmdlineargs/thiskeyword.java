@@ -1,4 +1,4 @@
-package Basic.cmdlineargs;
+package cmdlineargs;
 
 /**
  * this Keyword in Java is a reference variable that refers to the current object.

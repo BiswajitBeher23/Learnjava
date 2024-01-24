@@ -1,4 +1,4 @@
-package Basic.memorymanagement;
+package memorymanagement;
 
 /**
  * staticvar

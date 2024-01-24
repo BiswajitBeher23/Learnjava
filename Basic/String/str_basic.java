@@ -1,4 +1,4 @@
-package Basic.String;
+package String;
 
 public class str_basic {
 

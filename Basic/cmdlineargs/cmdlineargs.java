@@ -1,4 +1,4 @@
-package Basic.cmdlineargs;
+package cmdlineargs;
 
 public class cmdlineargs {
     public static void main(String[] args) {

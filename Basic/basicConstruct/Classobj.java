@@ -1,4 +1,4 @@
-package Basic.basicConstruct;
+package basicConstruct;
 
 public class Classobj {
     
