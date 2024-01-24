@@ -1,4 +1,4 @@
-package Abstract_Interface.Inheritance;
+package basics.Abstract_Interface.Inheritance;
 
 /**
  * Single inheritance
