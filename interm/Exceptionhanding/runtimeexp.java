@@ -1,4 +1,4 @@
-package Exceptionhanding;
+package interm.Exceptionhanding;
 
 public class runtimeexp extends Exception {
 

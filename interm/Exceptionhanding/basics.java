@@ -1,4 +1,4 @@
-package Exceptionhanding;
+package interm.Exceptionhanding;
 
 /**
  Checked Exceptions:Checked exceptions are called compile-time exceptions because these exceptions are 
