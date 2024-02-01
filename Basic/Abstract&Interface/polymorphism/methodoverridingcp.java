@@ -1,4 +1,3 @@
-package Abstract_Interface.polymorphism;
 
 class Parent {
     void show(){
