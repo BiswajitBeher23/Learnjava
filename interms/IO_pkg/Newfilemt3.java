@@ -1,11 +1,11 @@
 package interms.IO_pkg;
 
 import java.io.File;
-//import java.io.FileReader;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class Newfilemt2 {
+public class Newfilemt3 {
 
     /**
      * @param args
@@ -13,13 +13,13 @@ public class Newfilemt2 {
     public static void main(String args[]) {
 
         try {
-            String dirname = "user";
+            String dirname = "lijava";
             File directory = new File(dirname);
 
             // Create directory now.
             directory.mkdirs();
             // file obj
-            File file = new File("user/user.txt");
+            File file = new File("lijava/Javasyntax.java");
 
             // Create the file
             if (file.createNewFile()) {
@@ -30,26 +30,18 @@ public class Newfilemt2 {
 
             // Write Content
             FileWriter writer = new FileWriter(file);
-            writer.write("\r\n" + //
-                    "            Day 1: {\r\n" + //
-                    "                morning: corejava,\r\n" + //
-                    "                afternoon: advancejava,\r\n" + //
-                    "                evening: database\r\n" + //
-                    "            },\r\n" + //
-                    "            Day 2: {\r\n" + //
-                    "                morning: advancejava,\r\n" + //
-                    "                afternoon: corejava,\r\n" + //
-                    "                evening: database\r\n" + //
-                    "            },\r\n" + //
-                    "            Day 3: {\r\n" + //
-                    "                morning: database,\r\n" + //
-                    "                afternoon: advancejava,\r\n" + //
-                    "                evening: corejava\r\n" + //
-                    "            }");
+            writer.write("public class Javasyntax {\r\n" + //
+                                "    \r\n" + //
+                                "    public static void main(String[] args) {\r\n" + //
+                                "        \r\n" + //
+                                "        System.out.println(\"hello world\");\r\n" + //
+                                "    }\r\n" + //
+                                "}");
             writer.close();
 
             // read content
-           /**
+           /*** 
+            */
             
             try (
                     FileReader reader = new FileReader(file)) {
@@ -58,8 +50,7 @@ public class Newfilemt2 {
                     char ch = (char) c;
                     System.out.print(ch);
                 }
-            }* 
-            */
+            }
 
             // delete file
             /**
