@@ -1,30 +1,36 @@
 package interms.multithreading;
 
+class Task {
+    public void TaskDemo() {
+        try {
+            for (int i = 4; i > 0; i--) {
+                System.out.println("Task is running..." + i);
+            }
+        } catch (Exception e) {
+            System.out.println("Task is interrupted.");
+        }
+    }
+}
+
 class Runnabledemo extends Thread {
     private Thread t;
     private String taskname;
+    Task TD;
 
-    Runnabledemo(String name) {
+    Runnabledemo(String name, Task td) {
         taskname = name;
-        System.out.println("Creating the task " + taskname);
+        TD = td;
     }
 
     public void run() {
-        System.out.println("Running task is " + taskname);
-
-        try {
-            for (int i = 4; i > 0; i--) {
-                System.out.println("Task:  " + taskname + "," + i);
-                Thread.sleep(100);
-            }
-        } catch (InterruptedException e) {
-            System.out.println("Task " + taskname + " is  interrupted.");
+        synchronized(TD){
+            TD.TaskDemo();
         }
         System.out.println("Exiting from " + taskname);
     }
 
-    public void start(){
-        System.out.println("Starting the task "+ taskname);
+    public void start() {
+        System.out.println("Starting the task " + taskname);
         if (t == null) {
             t = new Thread(this, taskname);
             t.start();
@@ -35,11 +41,14 @@ class Runnabledemo extends Thread {
 public class threadbasic {
 
     public static void main(String[] args) {
-        Runnabledemo Ts1 = new Runnabledemo("Brush");
-        Runnabledemo Ts2 = new Runnabledemo("Breakfast");
-        Runnabledemo Ts3 = new Runnabledemo("preparing for college");
-        Runnabledemo Ts4 = new Runnabledemo("Going to room");
-        
+
+        Task TS = new Task();
+
+        Runnabledemo Ts1 = new Runnabledemo("Brush", TS);
+        Runnabledemo Ts2 = new Runnabledemo("Breakfast", TS);
+        Runnabledemo Ts3 = new Runnabledemo("preparing for college", TS);
+        Runnabledemo Ts4 = new Runnabledemo("Going to room", TS);
+
         Ts1.start();
         Ts2.start();
         Ts3.start();
@@ -51,8 +60,7 @@ public class threadbasic {
             Ts3.join();
             Ts4.join();
         } catch (Exception e) {
-            // TODO: handle exception
-            System.out.println("Interrupted"+ e);
+            System.out.println("Interrupted" + e);
         }
 
     }
