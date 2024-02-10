@@ -1,0 +1,45 @@
+@import url('assets/fonts/Noto_Sans/NotoSans-Italic-VariableFont_wdth,wght.ttf');
+@import url('assets/fonts/Noto_Sans/NotoSans-VariableFont_wdth,wght.ttf');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+    font: 12px;
+    text-align: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.topnav {
+    background-color: #5841416a;
+    overflow: hidden;
+    height: 5vh;
+    padding: 0px 10px;
+}
+.topnav .sitelogo{
+    float: left;
+}
+
+.topnav a {
+    display: inline-flex;
+    color: #000;
+    text-align: center;
+    padding: 10px 10px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.topnav a:hover{
+    /*background-color: #6f1010;*/
+    border-bottom: 3px solid #6f1010;
+    color: #76271a;
+}
+
+.topnav a:active{
+border-bottom: 5px solid #b90446;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form snippets</title>
+</head>
+
+<body>
+    <main>
+        <section>
+            <h3>Register form</h3>
+        </section>
+        <form action="#">
+            <legend>Profile</legend>
+            <label for="username">Username:
+                <input type="text" name="username" id="" placeholder="Enter username">
+            </label>
+            </br>
+            </br>
+            <label for="fullname">Fullname
+                <input type="text" name="fullname" id="">
+            </label>
+            </br>
+            </br>
+            <label for="address">Address
+                <input type="text" name="address" id="">
+            </label>
+            </br>
+            </br>
+            <label for="gender">choose your gender
+                <input list="gen" id="gender" placeholder="choose your gender">
+
+                <datalist id="gen">
+                    <option value="male">
+                    <option value="female">
+                    <option value="trans">
+                </datalist>
+            </label>
+            </br>
+            </br>
+            <label for="city">
+                <select name="city" id="city">
+                    <option value="" selected>select city</option>
+                    <option value="Jajpur">Jajpur</option>
+                    <option value="Cuttack">Cuttack</option>
+                    <option value="Bhubaneswar">Bhubaneswar</option>
+                </select>
+            </label>
+            </br>
+            </br>
+
+            <label for="Newjoin">New join
+                <input type="radio" id="joinee" name="joinee" value="newjoin">
+            </label>
+            <label for="oldjoin">Old join
+                <input type="radio" id="joinee" name="joinee" value="oldjoin">
+            </label>
+            <br>
+            <br>
+            
+            <label for="Newjoin">New join
+                <input type="checkbox" id="joinee" name="joinee" value="newjoin">
+            </label>
+            <label for="oldjoin">Old join
+                <input type="checkbox" id="joinee" name="joinee" value="oldjoin">
+            </label>
+            <br>
+            <br>
+            <input type="button" value="submit">
+            </fieldset>
+        </form>
+    </main>
+</body>
+
+</html>
