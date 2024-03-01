@@ -21,11 +21,10 @@
 *.tar.gz
 *.rar
 *.idea/
-learnpath/
-studyplan/
+studyroute/
 out/
 .vscode
-kotpractice/
+kotlinproj/
 server/
 
 
