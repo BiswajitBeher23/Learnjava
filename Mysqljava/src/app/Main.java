@@ -2,10 +2,11 @@ package app;
 
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.Scanner;
 
 import dbconfig.Myconn;
 
-public class Main extends Myconn {
+class Main extends Myconn {
 
 	public static void main(String[] args) throws SQLException {
 
@@ -23,20 +24,19 @@ public class Main extends Myconn {
 		 * 
 		 * } catch (SQLException e) { e.printStackTrace(); }
 		 */
-
-		// Insert records
-		try {
-			Schemas insertr = new Schemas();
-
-			if (insertr.insertRecords()) {
-				System.out.println("Datas Inserted");
-			} else {
-				System.out.println("Data insert failed");
-			}
+		Schemas obj = new Schemas();
+		try (Scanner rd = new Scanner(System.in)) {
+			obj.readSuser(rd.nextInt(), rd.next());
 		} catch (SQLException e) {
 			// TODO: handle exception
 			printSQLException(e);
 		}
+		// Insert records
+		// obj.recinsert();
+		// obj.read();
+		// obj.updateRecords();
+		// obj.deleteRecord();
+
 	}
 
 	public static void printSQLException(SQLException ex)
