@@ -10,23 +10,19 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/Home")
+@WebServlet(name = "Home", urlPatterns = "/")
 public class Home extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	@Override
 	public void init() throws ServletException {
-		// TODO Auto-generated method stub
 		super.init();
 	}
 
-	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		doGet(req, resp);
 	}
 
-	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		String pageload = req.getServletPath();
@@ -36,13 +32,20 @@ public class Home extends HttpServlet {
 			case "/feature":
 				showFeaturepage(req, resp);
 				break;
-
+			case "/price":
+				showPricingpage(req, resp);
+				break;
+			case "/faq":
+				showFaqpage(req, resp);
+				break;
+			case "/aboutus":
+				showAboutuspage(req, resp);
+				break;
 			default:
 				showHomepage(req, resp);
 				break;
 			}
 		} catch (SQLException e) {
-			// TODO: handle exception
 			throw new ServletException(e);
 		}
 
@@ -60,4 +63,21 @@ public class Home extends HttpServlet {
 		dispatcher.forward(request, response);
 	}
 
+	private void showPricingpage(HttpServletRequest request, HttpServletResponse response)
+			throws SQLException, IOException, ServletException {
+		RequestDispatcher dispatcher = request.getRequestDispatcher("pricing.jsp");
+		dispatcher.forward(request, response);
+	}
+
+	private void showFaqpage(HttpServletRequest request, HttpServletResponse response)
+			throws SQLException, IOException, ServletException {
+		RequestDispatcher dispatcher = request.getRequestDispatcher("faq.jsp");
+		dispatcher.forward(request, response);
+	}
+
+	private void showAboutuspage(HttpServletRequest request, HttpServletResponse response)
+			throws SQLException, IOException, ServletException {
+		RequestDispatcher dispatcher = request.getRequestDispatcher("aboutus.jsp");
+		dispatcher.forward(request, response);
+	}
 }

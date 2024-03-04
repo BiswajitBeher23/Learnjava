@@ -15,9 +15,9 @@
 			grid system, extensive prebuilt components, and powerful JavaScript
 			plugins.</p>
 		<div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-			<button type="button" class="btn btn-primary btn-sm px-4 gap-3">Primary
+			<button type="button" class="btn btn-primary btn-lg rounded-pill px-4 gap-3">Primary
 				button</button>
-			<button type="button" class="btn btn-outline-secondary btn-sm px-4">Secondary</button>
+			<button type="button" class="btn btn-outline-secondary btn-lg rounded-pill px-4">Secondary</button>
 		</div>
 	</div>
 
