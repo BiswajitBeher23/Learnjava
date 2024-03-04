@@ -1,7 +1,8 @@
 package app;
 
-import java.io.IOException;
+import java.io.IOException; 
 import java.sql.SQLException;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -10,13 +11,16 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import dao.Webdao;
+import model.Webcontent;
+
 @WebServlet(name = "Home", urlPatterns = "/")
 public class Home extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	private Webdao Webdao;
 
-	@Override
 	public void init() throws ServletException {
-		super.init();
+		Webdao = new Webdao();
 	}
 
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -53,6 +57,10 @@ public class Home extends HttpServlet {
 
 	private void showHomepage(HttpServletRequest request, HttpServletResponse response)
 			throws SQLException, IOException, ServletException {
+		
+		List < Webcontent > listhome = Webdao.HomePage();
+		request.setAttribute("listhome", listhome);	
+		
 		RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
 		dispatcher.forward(request, response);
 	}
