@@ -1,6 +1,6 @@
 package app;
 
-import java.io.IOException; 
+import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -57,16 +57,19 @@ public class Home extends HttpServlet {
 
 	private void showHomepage(HttpServletRequest request, HttpServletResponse response)
 			throws SQLException, IOException, ServletException {
-		
-		List < Webcontent > listhome = Webdao.HomePage();
-		request.setAttribute("listhome", listhome);	
-		
-		RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
+
+		List<Webcontent> listhome = Webdao.HomePage();
+		request.setAttribute("listhome", listhome);
+
+		RequestDispatcher dispatcher = request.getRequestDispatcher("home.jsp");
 		dispatcher.forward(request, response);
 	}
 
 	private void showFeaturepage(HttpServletRequest request, HttpServletResponse response)
 			throws SQLException, IOException, ServletException {
+		List<Webcontent> listfeature = Webdao.HomePage();
+		request.setAttribute("listfeature", listfeature);
+
 		RequestDispatcher dispatcher = request.getRequestDispatcher("features.jsp");
 		dispatcher.forward(request, response);
 	}
@@ -85,6 +88,10 @@ public class Home extends HttpServlet {
 
 	private void showAboutuspage(HttpServletRequest request, HttpServletResponse response)
 			throws SQLException, IOException, ServletException {
+		
+		List<Webcontent> aboutus = Webdao.HomePage();
+		request.setAttribute("aboutus", aboutus);
+		
 		RequestDispatcher dispatcher = request.getRequestDispatcher("aboutus.jsp");
 		dispatcher.forward(request, response);
 	}

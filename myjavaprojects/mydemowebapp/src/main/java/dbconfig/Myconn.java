@@ -18,12 +18,10 @@ public class Myconn {
 		}
 		
 		Connection conn = DriverManager.getConnection(jdbcurl, username, pass);
-		if(conn == null) {
-			System.out.println("unable to connect to database");
-		}else {
-			System.out.println("successfully connected");
-		}
-		
+		/*
+		 * if(conn == null) { System.out.println("unable to connect to database"); }else
+		 * { System.out.println("successfully connected"); }
+		 */
 		return conn;
 	}
 }

@@ -3,37 +3,25 @@ package model;
 public class Webcontent {
 
 	protected int id;
-	protected String feature_title;
-	protected String feature_para;
-	protected String faq_question;
-	protected String faq_answer;
-	protected String about_title;
-	protected String aboutus_desc;
-	protected String home_title;
-	protected String home_para;
+	private String feature_title, feature_para, faq_question, faq_answer,about_title, aboutus_desc,home_title,home_para;
 
 	public Webcontent() {
 	}
 	
-	public Webcontent(String feature_title, String feature_para,
+	public Webcontent(int id, String feature_title, String feature_para,
 			String faq_question, String faq_answer, String about_title, String aboutus_desc, String home_title, String home_para) {
 		super();
+		this.id = id;
 		this.feature_title = feature_title;
 		this.feature_para = feature_para;
 		this.faq_question = faq_question;
 		this.faq_answer = faq_answer;
 		this.about_title = about_title;
 		this.aboutus_desc = aboutus_desc;
-		this.feature_para = feature_para;
 		this.home_title = home_title;
 		this.home_para = home_para;
 	}
-	
-	public Webcontent(int uid, String home_title, String home_para) {
-		this.id = uid;
-		this.home_title = home_title;
-		this.home_para = home_para;
-	}
+
 
 	/**
 	 * @return the id

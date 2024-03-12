@@ -12,7 +12,7 @@ import dbconfig.Myconn;
 
 public class Webdao extends Myconn {
 	
-	private static final String HERO_DATA= "select id, home_title, home_para from webcontent where id = 1;";
+	private static final String HERO_DATA= "select * from webcontent;";
 	
 	
 	public Webdao() {
@@ -31,9 +31,16 @@ public class Webdao extends Myconn {
 			
 			while(rs.next()) {
 				int id = rs.getInt("id");
-				String home_title = rs.getString("home_title");
-				String home_para = rs.getString("home_para");
-				contents.add(new Webcontent(id, home_title, home_para));
+				String feature_title= rs.getString("feature_title");
+				String feature_para = rs.getString("feature_para");
+				String faq_question= rs.getString("faq_question");
+				String faq_answer= rs.getString("faq_answer");
+				String about_title= rs.getString("about_title");
+				String aboutus_desc= rs.getString("aboutus_desc");
+				String home_title= rs.getString("home_title");
+				String home_para= rs.getString("home_para");
+				contents.add(new Webcontent(id, feature_title, feature_para, faq_question, faq_answer, about_title, aboutus_desc, home_title, home_para));
+			//System.out.println(id+ "" + feature_title + "" + feature_para +""+ faq_question +""+faq_answer+""+about_title+""+aboutus_desc +""+home_title+""+home_para);
 			}
 		} catch(SQLException e) {
 			printSQLException(e);

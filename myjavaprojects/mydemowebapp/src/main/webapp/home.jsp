@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@page import="org.apache.jasper.tagplugins.jstl.core.ForEach"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <jsp:include page="Layouts/Header.jsp"></jsp:include>
 <jsp:include page="Components/Navbar.jsp"></jsp:include>
@@ -31,12 +32,11 @@
 	<c:forEach var="hero" items="${listhome}">
 	    
 		<h1 class="display-5 fw-bold text-body-emphasis">
-	        <c:out value="${hero.id}"></c:out>
-			<c:out value="${hero.home_title}"></c:out>
-			<c:out value="${hero.home_para}"></c:out>
+	      <c:out value="${hero.home_title}"></c:out>
 		</h1>
 		<div class="col-lg-6 mx-auto">
 			<p class="lead mb-4">
+				<c:out value="${hero.home_para}"></c:out>
 			</p>
 			<div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
 				<button type="button"
